@@ -7,6 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1402EC921A0E622600698EEA /* SKEmoticonsControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1402EC911A0E622600698EEA /* SKEmoticonsControlView.m */; };
+		14CA435C1A0EA091001E96BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D851987179ACFB8009542D9 /* Foundation.framework */; };
+		14CA435D1A0EA091001E96BD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D851989179ACFB8009542D9 /* CoreGraphics.framework */; };
+		14CA435E1A0EA091001E96BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D851985179ACFB8009542D9 /* UIKit.framework */; };
+		14CA43641A0EA091001E96BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14CA43621A0EA091001E96BD /* InfoPlist.strings */; };
+		14CA43661A0EA091001E96BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CA43651A0EA091001E96BD /* main.m */; };
+		14CA436A1A0EA091001E96BD /* SKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CA43691A0EA091001E96BD /* SKAppDelegate.m */; };
+		14CA436D1A0EA091001E96BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CA436B1A0EA091001E96BD /* Main.storyboard */; };
+		14CA43701A0EA091001E96BD /* SKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CA436F1A0EA091001E96BD /* SKViewController.m */; };
+		14CA43721A0EA091001E96BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14CA43711A0EA091001E96BD /* Images.xcassets */; };
+		14CA43791A0EA091001E96BD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CA43781A0EA091001E96BD /* XCTest.framework */; };
+		14CA437A1A0EA091001E96BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D851987179ACFB8009542D9 /* Foundation.framework */; };
+		14CA437B1A0EA091001E96BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D851985179ACFB8009542D9 /* UIKit.framework */; };
+		14CA43831A0EA091001E96BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14CA43811A0EA091001E96BD /* InfoPlist.strings */; };
+		14CA43851A0EA091001E96BD /* SKEmoticonsKeyboardDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CA43841A0EA091001E96BD /* SKEmoticonsKeyboardDemoTests.m */; };
+		14CA438C1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519AF179AD0F2009542D9 /* WUEmoticonsKeyboardKeyCell.h */; };
+		14CA438D1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B0179AD0F2009542D9 /* WUEmoticonsKeyboardKeyCell.m */; };
+		14CA438E1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItem.h in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B1179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItem.h */; };
+		14CA438F1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B2179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItem.m */; };
+		14CA43901A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItemGroup.h in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B3179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItemGroup.h */; };
+		14CA43911A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItemGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B4179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItemGroup.m */; };
+		14CA43921A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItemGroupView.h in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B5179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItemGroupView.h */; };
+		14CA43931A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItemGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B6179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItemGroupView.m */; };
+		14CA43941A0EA7B5001E96BD /* WUEmoticonsKeyboardKeysPageFlowLayout.h in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B7179AD0F2009542D9 /* WUEmoticonsKeyboardKeysPageFlowLayout.h */; };
+		14CA43951A0EA7B5001E96BD /* WUEmoticonsKeyboardKeysPageFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B8179AD0F2009542D9 /* WUEmoticonsKeyboardKeysPageFlowLayout.m */; };
+		14CA43961A0EA7B5001E96BD /* SKEmoticonsControlView.h in Sources */ = {isa = PBXBuildFile; fileRef = 1402EC901A0E622600698EEA /* SKEmoticonsControlView.h */; };
+		14CA43971A0EA7B5001E96BD /* SKEmoticonsControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1402EC911A0E622600698EEA /* SKEmoticonsControlView.m */; };
+		14CA43981A0EA7DA001E96BD /* WUDemoKeyboardTextKeyCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519C8179AD337009542D9 /* WUDemoKeyboardTextKeyCell.h */; };
+		14CA43991A0EA7DA001E96BD /* WUDemoKeyboardTextKeyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519C9179AD337009542D9 /* WUDemoKeyboardTextKeyCell.m */; };
+		14CA439B1A0EBA11001E96BD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CA439A1A0EBA11001E96BD /* MobileCoreServices.framework */; };
+		14CA439D1A0EBCA4001E96BD /* EmotionTextKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14CA439C1A0EBCA4001E96BD /* EmotionTextKeys.plist */; };
+		14CA439E1A0EC043001E96BD /* WUDemoKeyboardPressedCellPopupView.h in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519C5179AD1D4009542D9 /* WUDemoKeyboardPressedCellPopupView.h */; };
+		14CA439F1A0EC043001E96BD /* WUDemoKeyboardPressedCellPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519C6179AD1D4009542D9 /* WUDemoKeyboardPressedCellPopupView.m */; };
 		9D851986179ACFB8009542D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D851985179ACFB8009542D9 /* UIKit.framework */; };
 		9D851988179ACFB8009542D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D851987179ACFB8009542D9 /* Foundation.framework */; };
 		9D85198A179ACFB8009542D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D851989179ACFB8009542D9 /* CoreGraphics.framework */; };
@@ -66,7 +99,37 @@
 		9D8620D2179ED30F00E0C429 /* keyboard_emotion@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D8620CA179ED30F00E0C429 /* keyboard_emotion@2x.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		14CA437C1A0EA091001E96BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D85197A179ACFB8009542D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14CA435A1A0EA091001E96BD;
+			remoteInfo = SKEmoticonsKeyboardDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1402EC901A0E622600698EEA /* SKEmoticonsControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKEmoticonsControlView.h; sourceTree = "<group>"; };
+		1402EC911A0E622600698EEA /* SKEmoticonsControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKEmoticonsControlView.m; sourceTree = "<group>"; };
+		14CA435B1A0EA091001E96BD /* SKEmoticonsKeyboardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKEmoticonsKeyboardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14CA43611A0EA091001E96BD /* SKEmoticonsKeyboardDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SKEmoticonsKeyboardDemo-Info.plist"; sourceTree = "<group>"; };
+		14CA43631A0EA091001E96BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		14CA43651A0EA091001E96BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14CA43671A0EA091001E96BD /* SKEmoticonsKeyboardDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKEmoticonsKeyboardDemo-Prefix.pch"; sourceTree = "<group>"; };
+		14CA43681A0EA091001E96BD /* SKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKAppDelegate.h; sourceTree = "<group>"; };
+		14CA43691A0EA091001E96BD /* SKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAppDelegate.m; sourceTree = "<group>"; };
+		14CA436C1A0EA091001E96BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14CA436E1A0EA091001E96BD /* SKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKViewController.h; sourceTree = "<group>"; };
+		14CA436F1A0EA091001E96BD /* SKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKViewController.m; sourceTree = "<group>"; };
+		14CA43711A0EA091001E96BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		14CA43771A0EA091001E96BD /* SKEmoticonsKeyboardDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKEmoticonsKeyboardDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14CA43781A0EA091001E96BD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		14CA43801A0EA091001E96BD /* SKEmoticonsKeyboardDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SKEmoticonsKeyboardDemoTests-Info.plist"; sourceTree = "<group>"; };
+		14CA43821A0EA091001E96BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		14CA43841A0EA091001E96BD /* SKEmoticonsKeyboardDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKEmoticonsKeyboardDemoTests.m; sourceTree = "<group>"; };
+		14CA439A1A0EBA11001E96BD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		14CA439C1A0EBCA4001E96BD /* EmotionTextKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = EmotionTextKeys.plist; path = WUEmoticonsKeyboardDemo/Resources/EmotionTextKeys.plist; sourceTree = SOURCE_ROOT; };
 		9D851982179ACFB8009542D9 /* WUEmoticonsKeyboardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WUEmoticonsKeyboardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D851985179ACFB8009542D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9D851987179ACFB8009542D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -143,6 +206,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		14CA43581A0EA091001E96BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14CA439B1A0EBA11001E96BD /* MobileCoreServices.framework in Frameworks */,
+				14CA435D1A0EA091001E96BD /* CoreGraphics.framework in Frameworks */,
+				14CA435E1A0EA091001E96BD /* UIKit.framework in Frameworks */,
+				14CA435C1A0EA091001E96BD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14CA43741A0EA091001E96BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14CA43791A0EA091001E96BD /* XCTest.framework in Frameworks */,
+				14CA437B1A0EA091001E96BD /* UIKit.framework in Frameworks */,
+				14CA437A1A0EA091001E96BD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9D85197F179ACFB8009542D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -156,11 +240,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14CA435F1A0EA091001E96BD /* SKEmoticonsKeyboardDemo */ = {
+			isa = PBXGroup;
+			children = (
+				14CA439C1A0EBCA4001E96BD /* EmotionTextKeys.plist */,
+				14CA43681A0EA091001E96BD /* SKAppDelegate.h */,
+				14CA43691A0EA091001E96BD /* SKAppDelegate.m */,
+				14CA436B1A0EA091001E96BD /* Main.storyboard */,
+				14CA436E1A0EA091001E96BD /* SKViewController.h */,
+				14CA436F1A0EA091001E96BD /* SKViewController.m */,
+				14CA43711A0EA091001E96BD /* Images.xcassets */,
+				14CA43601A0EA091001E96BD /* Supporting Files */,
+			);
+			path = SKEmoticonsKeyboardDemo;
+			sourceTree = "<group>";
+		};
+		14CA43601A0EA091001E96BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14CA43611A0EA091001E96BD /* SKEmoticonsKeyboardDemo-Info.plist */,
+				14CA43621A0EA091001E96BD /* InfoPlist.strings */,
+				14CA43651A0EA091001E96BD /* main.m */,
+				14CA43671A0EA091001E96BD /* SKEmoticonsKeyboardDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14CA437E1A0EA091001E96BD /* SKEmoticonsKeyboardDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				14CA43841A0EA091001E96BD /* SKEmoticonsKeyboardDemoTests.m */,
+				14CA437F1A0EA091001E96BD /* Supporting Files */,
+			);
+			path = SKEmoticonsKeyboardDemoTests;
+			sourceTree = "<group>";
+		};
+		14CA437F1A0EA091001E96BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14CA43801A0EA091001E96BD /* SKEmoticonsKeyboardDemoTests-Info.plist */,
+				14CA43811A0EA091001E96BD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		9D851979179ACFB8009542D9 = {
 			isa = PBXGroup;
 			children = (
 				9D8519AB179AD0F2009542D9 /* WUEmoticonsKeyboard */,
 				9D85198B179ACFB8009542D9 /* WUEmoticonsKeyboardDemo */,
+				14CA435F1A0EA091001E96BD /* SKEmoticonsKeyboardDemo */,
+				14CA437E1A0EA091001E96BD /* SKEmoticonsKeyboardDemoTests */,
 				9D851984179ACFB8009542D9 /* Frameworks */,
 				9D851983179ACFB8009542D9 /* Products */,
 			);
@@ -170,6 +300,8 @@
 			isa = PBXGroup;
 			children = (
 				9D851982179ACFB8009542D9 /* WUEmoticonsKeyboardDemo.app */,
+				14CA435B1A0EA091001E96BD /* SKEmoticonsKeyboardDemo.app */,
+				14CA43771A0EA091001E96BD /* SKEmoticonsKeyboardDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,9 +309,11 @@
 		9D851984179ACFB8009542D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14CA439A1A0EBA11001E96BD /* MobileCoreServices.framework */,
 				9D851985179ACFB8009542D9 /* UIKit.framework */,
 				9D851987179ACFB8009542D9 /* Foundation.framework */,
 				9D851989179ACFB8009542D9 /* CoreGraphics.framework */,
+				14CA43781A0EA091001E96BD /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -235,6 +369,8 @@
 				9D8519B8179AD0F2009542D9 /* WUEmoticonsKeyboardKeysPageFlowLayout.m */,
 				9D8519B9179AD0F2009542D9 /* WUEmoticonsKeyboardToolsView.h */,
 				9D8519BA179AD0F2009542D9 /* WUEmoticonsKeyboardToolsView.m */,
+				1402EC901A0E622600698EEA /* SKEmoticonsControlView.h */,
+				1402EC911A0E622600698EEA /* SKEmoticonsControlView.m */,
 			);
 			name = WUEmoticonsKeyboard;
 			path = ../WUEmoticonsKeyboard;
@@ -303,6 +439,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		14CA435A1A0EA091001E96BD /* SKEmoticonsKeyboardDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14CA438A1A0EA091001E96BD /* Build configuration list for PBXNativeTarget "SKEmoticonsKeyboardDemo" */;
+			buildPhases = (
+				14CA43571A0EA091001E96BD /* Sources */,
+				14CA43581A0EA091001E96BD /* Frameworks */,
+				14CA43591A0EA091001E96BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SKEmoticonsKeyboardDemo;
+			productName = SKEmoticonsKeyboardDemo;
+			productReference = 14CA435B1A0EA091001E96BD /* SKEmoticonsKeyboardDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14CA43761A0EA091001E96BD /* SKEmoticonsKeyboardDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14CA438B1A0EA091001E96BD /* Build configuration list for PBXNativeTarget "SKEmoticonsKeyboardDemoTests" */;
+			buildPhases = (
+				14CA43731A0EA091001E96BD /* Sources */,
+				14CA43741A0EA091001E96BD /* Frameworks */,
+				14CA43751A0EA091001E96BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14CA437D1A0EA091001E96BD /* PBXTargetDependency */,
+			);
+			name = SKEmoticonsKeyboardDemoTests;
+			productName = SKEmoticonsKeyboardDemoTests;
+			productReference = 14CA43771A0EA091001E96BD /* SKEmoticonsKeyboardDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9D851981179ACFB8009542D9 /* WUEmoticonsKeyboardDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D8519A5179ACFB9009542D9 /* Build configuration list for PBXNativeTarget "WUEmoticonsKeyboardDemo" */;
@@ -329,6 +500,11 @@
 				CLASSPREFIX = WU;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = YuAo;
+				TargetAttributes = {
+					14CA43761A0EA091001E96BD = {
+						TestTargetID = 9D851981179ACFB8009542D9;
+					};
+				};
 			};
 			buildConfigurationList = 9D85197D179ACFB8009542D9 /* Build configuration list for PBXProject "WUEmoticonsKeyboardDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -336,6 +512,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 9D851979179ACFB8009542D9;
 			productRefGroup = 9D851983179ACFB8009542D9 /* Products */;
@@ -343,11 +520,32 @@
 			projectRoot = "";
 			targets = (
 				9D851981179ACFB8009542D9 /* WUEmoticonsKeyboardDemo */,
+				14CA435A1A0EA091001E96BD /* SKEmoticonsKeyboardDemo */,
+				14CA43761A0EA091001E96BD /* SKEmoticonsKeyboardDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		14CA43591A0EA091001E96BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14CA43721A0EA091001E96BD /* Images.xcassets in Resources */,
+				14CA43641A0EA091001E96BD /* InfoPlist.strings in Resources */,
+				14CA436D1A0EA091001E96BD /* Main.storyboard in Resources */,
+				14CA439D1A0EBCA4001E96BD /* EmotionTextKeys.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14CA43751A0EA091001E96BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14CA43831A0EA091001E96BD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9D851980179ACFB8009542D9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -400,6 +598,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		14CA43571A0EA091001E96BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14CA439E1A0EC043001E96BD /* WUDemoKeyboardPressedCellPopupView.h in Sources */,
+				14CA439F1A0EC043001E96BD /* WUDemoKeyboardPressedCellPopupView.m in Sources */,
+				14CA43981A0EA7DA001E96BD /* WUDemoKeyboardTextKeyCell.h in Sources */,
+				14CA43991A0EA7DA001E96BD /* WUDemoKeyboardTextKeyCell.m in Sources */,
+				14CA438C1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyCell.h in Sources */,
+				14CA438D1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyCell.m in Sources */,
+				14CA438E1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItem.h in Sources */,
+				14CA438F1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItem.m in Sources */,
+				14CA43901A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItemGroup.h in Sources */,
+				14CA43911A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItemGroup.m in Sources */,
+				14CA43921A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItemGroupView.h in Sources */,
+				14CA43931A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItemGroupView.m in Sources */,
+				14CA43941A0EA7B5001E96BD /* WUEmoticonsKeyboardKeysPageFlowLayout.h in Sources */,
+				14CA43951A0EA7B5001E96BD /* WUEmoticonsKeyboardKeysPageFlowLayout.m in Sources */,
+				14CA43961A0EA7B5001E96BD /* SKEmoticonsControlView.h in Sources */,
+				14CA43971A0EA7B5001E96BD /* SKEmoticonsControlView.m in Sources */,
+				14CA436A1A0EA091001E96BD /* SKAppDelegate.m in Sources */,
+				14CA43701A0EA091001E96BD /* SKViewController.m in Sources */,
+				14CA43661A0EA091001E96BD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14CA43731A0EA091001E96BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14CA43851A0EA091001E96BD /* SKEmoticonsKeyboardDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9D85197E179ACFB8009542D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,6 +641,7 @@
 				9D8519BB179AD0F2009542D9 /* WUEmoticonsKeyboard.m in Sources */,
 				9D8519BC179AD0F2009542D9 /* WUEmoticonsKeyboardKeyCell.m in Sources */,
 				9D8519BD179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItem.m in Sources */,
+				1402EC921A0E622600698EEA /* SKEmoticonsControlView.m in Sources */,
 				9D8519BE179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItemGroup.m in Sources */,
 				9D8519BF179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItemGroupView.m in Sources */,
 				9D8519C0179AD0F2009542D9 /* WUEmoticonsKeyboardKeysPageFlowLayout.m in Sources */,
@@ -421,7 +654,39 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		14CA437D1A0EA091001E96BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14CA435A1A0EA091001E96BD /* SKEmoticonsKeyboardDemo */;
+			targetProxy = 14CA437C1A0EA091001E96BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		14CA43621A0EA091001E96BD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14CA43631A0EA091001E96BD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		14CA436B1A0EA091001E96BD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14CA436C1A0EA091001E96BD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		14CA43811A0EA091001E96BD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14CA43821A0EA091001E96BD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		9D85198E179ACFB9009542D9 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -441,6 +706,118 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		14CA43861A0EA091001E96BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SKEmoticonsKeyboardDemo/SKEmoticonsKeyboardDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "SKEmoticonsKeyboardDemo/SKEmoticonsKeyboardDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		14CA43871A0EA091001E96BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SKEmoticonsKeyboardDemo/SKEmoticonsKeyboardDemo-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "SKEmoticonsKeyboardDemo/SKEmoticonsKeyboardDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		14CA43881A0EA091001E96BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WUEmoticonsKeyboardDemo.app/WUEmoticonsKeyboardDemo";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SKEmoticonsKeyboardDemo/SKEmoticonsKeyboardDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "SKEmoticonsKeyboardDemoTests/SKEmoticonsKeyboardDemoTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		14CA43891A0EA091001E96BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WUEmoticonsKeyboardDemo.app/WUEmoticonsKeyboardDemo";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SKEmoticonsKeyboardDemo/SKEmoticonsKeyboardDemo-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "SKEmoticonsKeyboardDemoTests/SKEmoticonsKeyboardDemoTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		9D8519A3179ACFB9009542D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -522,6 +899,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		14CA438A1A0EA091001E96BD /* Build configuration list for PBXNativeTarget "SKEmoticonsKeyboardDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14CA43861A0EA091001E96BD /* Debug */,
+				14CA43871A0EA091001E96BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		14CA438B1A0EA091001E96BD /* Build configuration list for PBXNativeTarget "SKEmoticonsKeyboardDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14CA43881A0EA091001E96BD /* Debug */,
+				14CA43891A0EA091001E96BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		9D85197D179ACFB8009542D9 /* Build configuration list for PBXProject "WUEmoticonsKeyboardDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

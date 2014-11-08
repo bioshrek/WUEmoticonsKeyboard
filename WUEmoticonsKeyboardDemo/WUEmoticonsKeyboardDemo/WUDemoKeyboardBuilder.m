@@ -34,7 +34,7 @@
         
         //Icon key group
         WUEmoticonsKeyboardKeyItemGroup *imageIconsGroup = [[WUEmoticonsKeyboardKeyItemGroup alloc] init];
-        imageIconsGroup.keyItems = @[loveKey,applaudKey,weicoKey];
+        imageIconsGroup.keyItems = @[loveKey,applaudKey,weicoKey,loveKey,applaudKey,weicoKey,loveKey,applaudKey,weicoKey,loveKey,applaudKey,weicoKey,loveKey,applaudKey,weicoKey,loveKey,applaudKey,weicoKey,loveKey,applaudKey,weicoKey,loveKey,applaudKey,weicoKey,loveKey,applaudKey,weicoKey,loveKey,applaudKey,weicoKey];
         UIImage *keyboardEmotionImage = [UIImage imageNamed:@"keyboard_emotion"];
         UIImage *keyboardEmotionSelectedImage = [UIImage imageNamed:@"keyboard_emotion_selected"];
         if ([UIImage instancesRespondToSelector:@selector(imageWithRenderingMode:)]) {
