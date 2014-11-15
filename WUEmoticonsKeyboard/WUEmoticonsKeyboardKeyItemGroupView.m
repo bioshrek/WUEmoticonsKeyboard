@@ -40,6 +40,8 @@ CGFloat const WUEmoticonsKeyboardKeyItemGroupViewPageControlHeight = 23;
         UIPageControl *pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), WUEmoticonsKeyboardKeyItemGroupViewPageControlHeight)];
         pageControl.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
         pageControl.userInteractionEnabled = NO;
+        pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+        pageControl.currentPageIndicatorTintColor = [UIColor darkGrayColor];
         [self addSubview:pageControl];
         self.pageControl = pageControl;
         

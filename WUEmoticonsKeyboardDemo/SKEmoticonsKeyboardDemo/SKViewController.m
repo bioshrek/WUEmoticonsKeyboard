@@ -12,7 +12,6 @@
 
 #import "WUEmoticonsKeyboardKeysPageFlowLayout.h"
 #import "WUDemoKeyboardTextKeyCell.h"
-#import "WUDemoKeyboardPressedCellPopupView.h"
 
 #import <MobileCoreServices/MobileCoreServices.h>
 
@@ -22,7 +21,7 @@
 
 @property (strong, nonatomic) SKEmoticonsControlView *emoticonKeyboard;
 
-@property (weak, nonatomic) WUDemoKeyboardPressedCellPopupView *pressedKeyCellPopupView;
+@property (nonatomic, strong) WUEmoticonsKeyboardKeyItemGroup *iconKeyItemGroup;
 
 @end
 
@@ -37,13 +36,6 @@
     
     self.emoticonKeyboard = [self createEmoticonsKeyboard];
     self.emoticonKeyboard.delegate = self;
-    
-    // install key popup view
-    WUDemoKeyboardPressedCellPopupView *pressedKeyCellPopupView;
-    pressedKeyCellPopupView = [[WUDemoKeyboardPressedCellPopupView alloc] initWithFrame:CGRectMake(0, 0, 83, 110)];
-    pressedKeyCellPopupView.hidden = YES;
-    [self.emoticonKeyboard addSubview:pressedKeyCellPopupView];
-    self.pressedKeyCellPopupView = pressedKeyCellPopupView;
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,7 +49,6 @@
 - (SKEmoticonsControlView *)createEmoticonsKeyboard
 {
     SKEmoticonsControlView *keyboard = [[SKEmoticonsControlView alloc] initWithFrame:CGRectMake(0, 0, 320, 220)];
-    keyboard.backgroundColor = [UIColor whiteColor];
     
     //Icon keys
     WUEmoticonsKeyboardKeyItem *loveKey = [[WUEmoticonsKeyboardKeyItem alloc] init];
@@ -82,7 +73,9 @@
         keyboardEmotionSelectedImage = [keyboardEmotionSelectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     }
     imageIconsGroup.image = keyboardEmotionImage;
-//    imageIconsGroup.selectedImage = keyboardEmotionSelectedImage;
+    imageIconsGroup.selectedImage = keyboardEmotionSelectedImage;
+    imageIconsGroup.popupViewWhenKeyCellPressed = YES;
+    self.iconKeyItemGroup = imageIconsGroup;
     
     //Text keys
     NSArray *textKeys = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"EmotionTextKeys" ofType:@"plist"]];
@@ -119,13 +112,6 @@
     //Set keyItemGroups
     keyboard.keyItemGroups = @[imageIconsGroup, textIconsGroup];
     
-    //Setup cell popup view
-    /*
-     [keyboard setKeyItemGroupPressedKeyCellChangedBlock:^(WUEmoticonsKeyboardKeyItemGroup *keyItemGroup, WUEmoticonsKeyboardKeyCell *fromCell, WUEmoticonsKeyboardKeyCell *toCell) {
-     [WUDemoKeyboardBuilder sharedEmotionsKeyboardKeyItemGroup:keyItemGroup pressedKeyCellChangedFromCell:fromCell toCell:toCell];
-     }];
-     */
-    
     //Keyboard appearance
     
     //Custom text icons scroll background
@@ -137,13 +123,22 @@
     }
     
     //Custom utility keys
+    [keyboard.leftButton setBackgroundColor:[UIColor whiteColor]];
+    [keyboard.leftButton setBackgroundImage:[UIImage imageNamed:@"gray-background"] forState:UIControlStateHighlighted];
     [keyboard.leftButton setImage:[UIImage imageNamed:@"keyboard_switch"] forState:UIControlStateNormal];
     [keyboard.leftButton setImage:[UIImage imageNamed:@"keyboard_switch_pressed"] forState:UIControlStateHighlighted];
     [keyboard.leftButton addTarget:self action:@selector(switchBackButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [keyboard.rightButton setBackgroundColor:[UIColor whiteColor]];
     [keyboard.rightButton setImage:[UIImage imageNamed:@"keyboard_del"] forState:UIControlStateNormal];
     [keyboard.rightButton setImage:[UIImage imageNamed:@"keyboard_del_pressed"] forState:UIControlStateHighlighted];
+    [keyboard.rightButton setBackgroundImage:[UIImage imageNamed:@"gray-background"] forState:UIControlStateHighlighted];
     [keyboard.rightButton addTarget:self action:@selector(backspaceButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-//    keyboard.segmentedControl.tintColor = [UIColor lightGrayColor];
+    
+    keyboard.segmentedControl.tintColor = [UIColor lightGrayColor];
+    [keyboard.segmentedControl setBackgroundImage:[UIImage imageNamed:@"white-background"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
+    keyboard.toolbar.backgroundColor = [UIColor whiteColor];
     
     //Keyboard background
     /*
@@ -187,33 +182,22 @@
 
 #pragma mark - SKEmoticonsControlDelegate
 
-- (void)keyItemGroup:(WUEmoticonsKeyboardKeyItemGroup *)keyItemGroup keyItemTapped:(WUEmoticonsKeyboardKeyItem *)keyItem
+- (void)keyItemTappedInGroupIndex:(NSUInteger)groupIndex itemIndex:(NSUInteger)itemIndex
 {
-    NSTextAttachment *attach = [[NSTextAttachment alloc] initWithData:UIImagePNGRepresentation(keyItem.image) ofType:(__bridge NSString *)kUTTypePNG];
-    attach.bounds = CGRectMake(0, 0, 16, 16);
-    NSAttributedString *attributedText = [NSAttributedString attributedStringWithAttachment:attach];
+    NSLog(@"index: %d", (int)itemIndex);
     
-    // insert attributed text
-    NSRange selectedRange = self.editor.selectedRange;
-    [self.editor.textStorage beginEditing];
-    [self.editor.textStorage replaceCharactersInRange:selectedRange withAttributedString:attributedText];
-    self.editor.selectedRange = NSMakeRange(selectedRange.location + [attributedText length], 0);
-    [self.editor.textStorage endEditing];
-    
-}
-
-- (void)keyItemGroup:(WUEmoticonsKeyboardKeyItemGroup *)keyItemGroup pressedKeyCellChangedFrom:(WUEmoticonsKeyboardKeyCell *)fromKeyCell to:(WUEmoticonsKeyboardKeyCell *)toKeyCell
-{
-    if ([self.emoticonKeyboard.keyItemGroups indexOfObject:keyItemGroup] == 0) {
-        [self.emoticonKeyboard bringSubviewToFront:self.pressedKeyCellPopupView];
-        if (toKeyCell) {
-            self.pressedKeyCellPopupView.keyItem = toKeyCell.keyItem;
-            self.pressedKeyCellPopupView.hidden = NO;
-            CGRect frame = [self.emoticonKeyboard convertRect:toKeyCell.bounds fromView:toKeyCell];
-            self.pressedKeyCellPopupView.center = CGPointMake(CGRectGetMidX(frame), CGRectGetMaxY(frame)-CGRectGetHeight(self.pressedKeyCellPopupView.frame)/2);
-        } else {
-            self.pressedKeyCellPopupView.hidden = YES;
-        }
+    if (0 == groupIndex) {
+        WUEmoticonsKeyboardKeyItem *keyItem = [self.iconKeyItemGroup.keyItems objectAtIndex:itemIndex];
+        NSTextAttachment *attach = [[NSTextAttachment alloc] initWithData:UIImagePNGRepresentation(keyItem.image) ofType:(__bridge NSString *)kUTTypePNG];
+        attach.bounds = CGRectMake(0, 0, 16, 16);
+        NSAttributedString *attributedText = [NSAttributedString attributedStringWithAttachment:attach];
+        
+        // insert attributed text
+        NSRange selectedRange = self.editor.selectedRange;
+        [self.editor.textStorage beginEditing];
+        [self.editor.textStorage replaceCharactersInRange:selectedRange withAttributedString:attributedText];
+        self.editor.selectedRange = NSMakeRange(selectedRange.location + [attributedText length], 0);
+        [self.editor.textStorage endEditing];
     }
 }
 

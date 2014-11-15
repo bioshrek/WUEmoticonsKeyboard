@@ -22,4 +22,6 @@
 /* CollectionViewCell class for this keyItemGroup. default is WUEmoticonsKeyboardKeyCell.class */
 @property (nonatomic,unsafe_unretained) Class                     keyItemCellClass;
 
+@property (nonatomic, assign) BOOL popupViewWhenKeyCellPressed;  // default: NO
+
 @end

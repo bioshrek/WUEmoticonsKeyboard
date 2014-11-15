@@ -8,7 +8,7 @@
 
 #import "WUDemoKeyboardBuilder.h"
 #import "WUDemoKeyboardTextKeyCell.h"
-#import "WUDemoKeyboardPressedCellPopupView.h"
+#import "WUKeyboardPressedCellPopupView.h"
 
 @implementation WUDemoKeyboardBuilder
 
@@ -120,10 +120,10 @@
              pressedKeyCellChangedFromCell:(WUEmoticonsKeyboardKeyCell *)fromCell
                                     toCell:(WUEmoticonsKeyboardKeyCell *)toCell
 {
-    static WUDemoKeyboardPressedCellPopupView *pressedKeyCellPopupView;
+    static WUKeyboardPressedCellPopupView *pressedKeyCellPopupView;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        pressedKeyCellPopupView = [[WUDemoKeyboardPressedCellPopupView alloc] initWithFrame:CGRectMake(0, 0, 83, 110)];
+        pressedKeyCellPopupView = [[WUKeyboardPressedCellPopupView alloc] initWithFrame:CGRectMake(0, 0, 83, 110)];
         pressedKeyCellPopupView.hidden = YES;
         [[self sharedEmoticonsKeyboard] addSubview:pressedKeyCellPopupView];
     });

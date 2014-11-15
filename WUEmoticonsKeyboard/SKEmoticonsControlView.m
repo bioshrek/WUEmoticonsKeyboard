@@ -8,17 +8,15 @@
 
 #import "SKEmoticonsControlView.h"
 
-#import "WUEmoticonsKeyboardKeyItemGroupView.h"
+#import "SKEmoticonsKeyboardItemGroupView.h"
 
 // constants: layout constants
-static CGFloat const kToolbarHeight = 44.0f;
+static CGFloat const kToolbarHeight = 45.0f;
 static CGFloat const kGroupViewHeight = 171.0f;
 
-@interface SKEmoticonsControlView ()
+@interface SKEmoticonsControlView () <SKEmoticonsKeyboardItemGroupViewDelegate>
 
-@property (weak, nonatomic) UIView *toolbar;
-
-@property (weak, nonatomic) WUEmoticonsKeyboardKeyItemGroupView *currentKeyItemGroupView;
+@property (weak, nonatomic) SKEmoticonsKeyboardItemGroupView *currentKeyItemGroupView;
 @property (nonatomic,strong) NSArray *keyItemGroupViews;
 
 
@@ -81,7 +79,6 @@ static CGFloat const kGroupViewHeight = 171.0f;
                                           toolbarSize.height / 2);
     
     // segment button
-//    self.segmentedControl.frame = CGRectMake(1, 1, 1, 1);
     self.segmentedControl.frame = CGRectMake(0, 0, toolbarSize.width - leftButtonSize.width - rightButtonSize.width - 2, leftButtonSize.height);
     self.segmentedControl.center = CGPointMake(toolbarSize.width / 2, toolbarSize.height / 2);
     
@@ -131,22 +128,13 @@ static CGFloat const kGroupViewHeight = 171.0f;
 }
 
 - (void)reloadKeyItemGroupViews {
-    __weak __typeof(&*self)weakSelf = self;
     self.keyItemGroupViews = nil;
     NSMutableArray *keyItemGroupViews = [NSMutableArray array];
     [self.keyItemGroups enumerateObjectsUsingBlock:^(WUEmoticonsKeyboardKeyItemGroup *keyItemGroup, NSUInteger idx, BOOL *stop) {
-        WUEmoticonsKeyboardKeyItemGroupView *keyItemGroupView = [[WUEmoticonsKeyboardKeyItemGroupView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), kGroupViewHeight)];
+        SKEmoticonsKeyboardItemGroupView *keyItemGroupView = [[SKEmoticonsKeyboardItemGroupView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), kGroupViewHeight)];
         keyItemGroupView.keyItemGroup = keyItemGroup;
-        [keyItemGroupView setKeyItemTappedBlock:^(WUEmoticonsKeyboardKeyItem *keyItem) {
-            if ([weakSelf.delegate respondsToSelector:@selector(keyItemGroup:keyItemTapped:)]) {
-                [weakSelf.delegate keyItemGroup:keyItemGroup keyItemTapped:keyItem];
-            }
-        }];
-        [keyItemGroupView setPressedKeyItemCellChangedBlock:^(WUEmoticonsKeyboardKeyCell *fromCell, WUEmoticonsKeyboardKeyCell *toCell) {
-            if ([weakSelf.delegate respondsToSelector:@selector(keyItemGroup:pressedKeyCellChangedFrom:to:)]) {
-                [weakSelf.delegate keyItemGroup:keyItemGroup pressedKeyCellChangedFrom:fromCell to:toCell];
-            }
-        }];
+        keyItemGroupView.delegate = self;
+        keyItemGroupView.popupViewWhenCellPressed = keyItemGroup.popupViewWhenKeyCellPressed;
         keyItemGroupView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [keyItemGroupViews addObject:keyItemGroupView];
     }];
@@ -197,11 +185,11 @@ static CGFloat const kGroupViewHeight = 171.0f;
         }
     }];
     
-    WUEmoticonsKeyboardKeyItemGroupView *newView = self.keyItemGroupViews[self.segmentedControl.selectedSegmentIndex];
+    SKEmoticonsKeyboardItemGroupView *newView = self.keyItemGroupViews[self.segmentedControl.selectedSegmentIndex];
     self.currentKeyItemGroupView = newView;
 }
 
-- (void)setCurrentKeyItemGroupView:(WUEmoticonsKeyboardKeyItemGroupView *)currentKeyItemGroupView
+- (void)setCurrentKeyItemGroupView:(SKEmoticonsKeyboardItemGroupView *)currentKeyItemGroupView
 {
     if (_currentKeyItemGroupView) {
         [_currentKeyItemGroupView removeFromSuperview];
@@ -211,6 +199,16 @@ static CGFloat const kGroupViewHeight = 171.0f;
     
     self.currentKeyItemGroupView.frame = [self rectForKeyItemGroupView];
     [self addSubview:currentKeyItemGroupView];
+}
+
+#pragma mark - SKEmoticonsKeyboardItemGroupView Delegate
+
+- (void)groupView:(SKEmoticonsKeyboardItemGroupView *)groupView didSelectItemAtIndex:(NSUInteger)index
+{
+    NSUInteger groupIndex = [self.keyItemGroupViews indexOfObject:groupView];
+    if (NSNotFound != groupIndex) {
+        [self.delegate keyItemTappedInGroupIndex:groupIndex itemIndex:index];
+    }
 }
 
 @end

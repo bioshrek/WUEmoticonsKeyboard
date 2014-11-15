@@ -21,8 +21,7 @@ typedef NS_ENUM(NSInteger, SKEmoticonControlButton) {
 
 @optional
 
-- (void)keyItemGroup:(WUEmoticonsKeyboardKeyItemGroup *)keyItemGroup
-       keyItemTapped:(WUEmoticonsKeyboardKeyItem *)keyItem;
+- (void)keyItemTappedInGroupIndex:(NSUInteger)groupIndex itemIndex:(NSUInteger)itemIndex;
 
 - (void)keyItemGroup:(WUEmoticonsKeyboardKeyItemGroup *)keyItemGroup
 pressedKeyCellChangedFrom:(WUEmoticonsKeyboardKeyCell *)fromKeyCell
@@ -36,6 +35,7 @@ pressedKeyCellChangedFrom:(WUEmoticonsKeyboardKeyCell *)fromKeyCell
 
 @property (nonatomic, weak) id<SKEmoticonsControlViewDelegate> delegate;
 
+@property (weak, nonatomic) UIView *toolbar;
 @property (weak, nonatomic) UIButton *leftButton;
 @property (weak, nonatomic) UIButton *rightButton;
 @property (weak, nonatomic) UISegmentedControl *segmentedControl;

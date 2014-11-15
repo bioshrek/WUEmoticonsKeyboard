@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1402EC921A0E622600698EEA /* SKEmoticonsControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1402EC911A0E622600698EEA /* SKEmoticonsControlView.m */; };
 		14CA435C1A0EA091001E96BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D851987179ACFB8009542D9 /* Foundation.framework */; };
 		14CA435D1A0EA091001E96BD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D851989179ACFB8009542D9 /* CoreGraphics.framework */; };
 		14CA435E1A0EA091001E96BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D851985179ACFB8009542D9 /* UIKit.framework */; };
@@ -24,22 +23,17 @@
 		14CA43851A0EA091001E96BD /* SKEmoticonsKeyboardDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CA43841A0EA091001E96BD /* SKEmoticonsKeyboardDemoTests.m */; };
 		14CA438C1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519AF179AD0F2009542D9 /* WUEmoticonsKeyboardKeyCell.h */; };
 		14CA438D1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B0179AD0F2009542D9 /* WUEmoticonsKeyboardKeyCell.m */; };
-		14CA438E1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItem.h in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B1179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItem.h */; };
 		14CA438F1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B2179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItem.m */; };
-		14CA43901A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItemGroup.h in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B3179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItemGroup.h */; };
 		14CA43911A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItemGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B4179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItemGroup.m */; };
-		14CA43921A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItemGroupView.h in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B5179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItemGroupView.h */; };
 		14CA43931A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItemGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B6179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItemGroupView.m */; };
-		14CA43941A0EA7B5001E96BD /* WUEmoticonsKeyboardKeysPageFlowLayout.h in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B7179AD0F2009542D9 /* WUEmoticonsKeyboardKeysPageFlowLayout.h */; };
 		14CA43951A0EA7B5001E96BD /* WUEmoticonsKeyboardKeysPageFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B8179AD0F2009542D9 /* WUEmoticonsKeyboardKeysPageFlowLayout.m */; };
-		14CA43961A0EA7B5001E96BD /* SKEmoticonsControlView.h in Sources */ = {isa = PBXBuildFile; fileRef = 1402EC901A0E622600698EEA /* SKEmoticonsControlView.h */; };
 		14CA43971A0EA7B5001E96BD /* SKEmoticonsControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1402EC911A0E622600698EEA /* SKEmoticonsControlView.m */; };
-		14CA43981A0EA7DA001E96BD /* WUDemoKeyboardTextKeyCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519C8179AD337009542D9 /* WUDemoKeyboardTextKeyCell.h */; };
 		14CA43991A0EA7DA001E96BD /* WUDemoKeyboardTextKeyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519C9179AD337009542D9 /* WUDemoKeyboardTextKeyCell.m */; };
 		14CA439B1A0EBA11001E96BD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CA439A1A0EBA11001E96BD /* MobileCoreServices.framework */; };
 		14CA439D1A0EBCA4001E96BD /* EmotionTextKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14CA439C1A0EBCA4001E96BD /* EmotionTextKeys.plist */; };
-		14CA439E1A0EC043001E96BD /* WUDemoKeyboardPressedCellPopupView.h in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519C5179AD1D4009542D9 /* WUDemoKeyboardPressedCellPopupView.h */; };
-		14CA439F1A0EC043001E96BD /* WUDemoKeyboardPressedCellPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519C6179AD1D4009542D9 /* WUDemoKeyboardPressedCellPopupView.m */; };
+		14E5073F1A176C2A00848535 /* SKEmoticonsKeyboardItemGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E5073C1A17694E00848535 /* SKEmoticonsKeyboardItemGroupView.m */; };
+		14FE2CA91A17AAB5005E0458 /* WUKeyboardPressedCellPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2CA81A17AAB5005E0458 /* WUKeyboardPressedCellPopupView.m */; };
+		14FE2CAA1A17B158005E0458 /* WUKeyboardPressedCellPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2CA81A17AAB5005E0458 /* WUKeyboardPressedCellPopupView.m */; };
 		9D851986179ACFB8009542D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D851985179ACFB8009542D9 /* UIKit.framework */; };
 		9D851988179ACFB8009542D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D851987179ACFB8009542D9 /* Foundation.framework */; };
 		9D85198A179ACFB8009542D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D851989179ACFB8009542D9 /* CoreGraphics.framework */; };
@@ -58,7 +52,6 @@
 		9D8519C0179AD0F2009542D9 /* WUEmoticonsKeyboardKeysPageFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519B8179AD0F2009542D9 /* WUEmoticonsKeyboardKeysPageFlowLayout.m */; };
 		9D8519C1179AD0F2009542D9 /* WUEmoticonsKeyboardToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519BA179AD0F2009542D9 /* WUEmoticonsKeyboardToolsView.m */; };
 		9D8519C4179AD108009542D9 /* WUDemoKeyboardBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519C3179AD108009542D9 /* WUDemoKeyboardBuilder.m */; };
-		9D8519C7179AD1D4009542D9 /* WUDemoKeyboardPressedCellPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519C6179AD1D4009542D9 /* WUDemoKeyboardPressedCellPopupView.m */; };
 		9D8519CA179AD337009542D9 /* WUDemoKeyboardTextKeyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8519C9179AD337009542D9 /* WUDemoKeyboardTextKeyCell.m */; };
 		9D8519E3179ADA53009542D9 /* keyboard_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D8519CD179ADA53009542D9 /* keyboard_bg.png */; };
 		9D8519E4179ADA53009542D9 /* keyboard_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D8519CE179ADA53009542D9 /* keyboard_bg@2x.png */; };
@@ -130,6 +123,10 @@
 		14CA43841A0EA091001E96BD /* SKEmoticonsKeyboardDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKEmoticonsKeyboardDemoTests.m; sourceTree = "<group>"; };
 		14CA439A1A0EBA11001E96BD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		14CA439C1A0EBCA4001E96BD /* EmotionTextKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = EmotionTextKeys.plist; path = WUEmoticonsKeyboardDemo/Resources/EmotionTextKeys.plist; sourceTree = SOURCE_ROOT; };
+		14E5073B1A17694E00848535 /* SKEmoticonsKeyboardItemGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKEmoticonsKeyboardItemGroupView.h; sourceTree = "<group>"; };
+		14E5073C1A17694E00848535 /* SKEmoticonsKeyboardItemGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKEmoticonsKeyboardItemGroupView.m; sourceTree = "<group>"; };
+		14FE2CA71A17AAB5005E0458 /* WUKeyboardPressedCellPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUKeyboardPressedCellPopupView.h; sourceTree = "<group>"; };
+		14FE2CA81A17AAB5005E0458 /* WUKeyboardPressedCellPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUKeyboardPressedCellPopupView.m; sourceTree = "<group>"; };
 		9D851982179ACFB8009542D9 /* WUEmoticonsKeyboardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WUEmoticonsKeyboardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D851985179ACFB8009542D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9D851987179ACFB8009542D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -162,8 +159,6 @@
 		9D8519BA179AD0F2009542D9 /* WUEmoticonsKeyboardToolsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUEmoticonsKeyboardToolsView.m; sourceTree = "<group>"; };
 		9D8519C2179AD108009542D9 /* WUDemoKeyboardBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUDemoKeyboardBuilder.h; sourceTree = "<group>"; };
 		9D8519C3179AD108009542D9 /* WUDemoKeyboardBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUDemoKeyboardBuilder.m; sourceTree = "<group>"; };
-		9D8519C5179AD1D4009542D9 /* WUDemoKeyboardPressedCellPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUDemoKeyboardPressedCellPopupView.h; sourceTree = "<group>"; };
-		9D8519C6179AD1D4009542D9 /* WUDemoKeyboardPressedCellPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUDemoKeyboardPressedCellPopupView.m; sourceTree = "<group>"; };
 		9D8519C8179AD337009542D9 /* WUDemoKeyboardTextKeyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUDemoKeyboardTextKeyCell.h; sourceTree = "<group>"; };
 		9D8519C9179AD337009542D9 /* WUDemoKeyboardTextKeyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUDemoKeyboardTextKeyCell.m; sourceTree = "<group>"; };
 		9D8519CD179ADA53009542D9 /* keyboard_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard_bg.png; sourceTree = "<group>"; };
@@ -328,8 +323,6 @@
 				9D8519C3179AD108009542D9 /* WUDemoKeyboardBuilder.m */,
 				9D8519C8179AD337009542D9 /* WUDemoKeyboardTextKeyCell.h */,
 				9D8519C9179AD337009542D9 /* WUDemoKeyboardTextKeyCell.m */,
-				9D8519C5179AD1D4009542D9 /* WUDemoKeyboardPressedCellPopupView.h */,
-				9D8519C6179AD1D4009542D9 /* WUDemoKeyboardPressedCellPopupView.m */,
 				9D8519CB179ADA53009542D9 /* Resources */,
 				9D85198C179ACFB8009542D9 /* Supporting Files */,
 			);
@@ -354,6 +347,8 @@
 		9D8519AB179AD0F2009542D9 /* WUEmoticonsKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				14FE2CA71A17AAB5005E0458 /* WUKeyboardPressedCellPopupView.h */,
+				14FE2CA81A17AAB5005E0458 /* WUKeyboardPressedCellPopupView.m */,
 				9D8519AC179AD0F2009542D9 /* UIResponder+WriteableInputView.h */,
 				9D8519AD179AD0F2009542D9 /* WUEmoticonsKeyboard.h */,
 				9D8519AE179AD0F2009542D9 /* WUEmoticonsKeyboard.m */,
@@ -371,6 +366,8 @@
 				9D8519BA179AD0F2009542D9 /* WUEmoticonsKeyboardToolsView.m */,
 				1402EC901A0E622600698EEA /* SKEmoticonsControlView.h */,
 				1402EC911A0E622600698EEA /* SKEmoticonsControlView.m */,
+				14E5073B1A17694E00848535 /* SKEmoticonsKeyboardItemGroupView.h */,
+				14E5073C1A17694E00848535 /* SKEmoticonsKeyboardItemGroupView.m */,
 			);
 			name = WUEmoticonsKeyboard;
 			path = ../WUEmoticonsKeyboard;
@@ -602,21 +599,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14CA439E1A0EC043001E96BD /* WUDemoKeyboardPressedCellPopupView.h in Sources */,
-				14CA439F1A0EC043001E96BD /* WUDemoKeyboardPressedCellPopupView.m in Sources */,
-				14CA43981A0EA7DA001E96BD /* WUDemoKeyboardTextKeyCell.h in Sources */,
+				14FE2CAA1A17B158005E0458 /* WUKeyboardPressedCellPopupView.m in Sources */,
+				14E5073F1A176C2A00848535 /* SKEmoticonsKeyboardItemGroupView.m in Sources */,
 				14CA43991A0EA7DA001E96BD /* WUDemoKeyboardTextKeyCell.m in Sources */,
 				14CA438C1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyCell.h in Sources */,
 				14CA438D1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyCell.m in Sources */,
-				14CA438E1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItem.h in Sources */,
 				14CA438F1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItem.m in Sources */,
-				14CA43901A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItemGroup.h in Sources */,
 				14CA43911A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItemGroup.m in Sources */,
-				14CA43921A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItemGroupView.h in Sources */,
 				14CA43931A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyItemGroupView.m in Sources */,
-				14CA43941A0EA7B5001E96BD /* WUEmoticonsKeyboardKeysPageFlowLayout.h in Sources */,
 				14CA43951A0EA7B5001E96BD /* WUEmoticonsKeyboardKeysPageFlowLayout.m in Sources */,
-				14CA43961A0EA7B5001E96BD /* SKEmoticonsControlView.h in Sources */,
 				14CA43971A0EA7B5001E96BD /* SKEmoticonsControlView.m in Sources */,
 				14CA436A1A0EA091001E96BD /* SKAppDelegate.m in Sources */,
 				14CA43701A0EA091001E96BD /* SKViewController.m in Sources */,
@@ -641,13 +632,12 @@
 				9D8519BB179AD0F2009542D9 /* WUEmoticonsKeyboard.m in Sources */,
 				9D8519BC179AD0F2009542D9 /* WUEmoticonsKeyboardKeyCell.m in Sources */,
 				9D8519BD179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItem.m in Sources */,
-				1402EC921A0E622600698EEA /* SKEmoticonsControlView.m in Sources */,
 				9D8519BE179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItemGroup.m in Sources */,
 				9D8519BF179AD0F2009542D9 /* WUEmoticonsKeyboardKeyItemGroupView.m in Sources */,
 				9D8519C0179AD0F2009542D9 /* WUEmoticonsKeyboardKeysPageFlowLayout.m in Sources */,
 				9D8519C1179AD0F2009542D9 /* WUEmoticonsKeyboardToolsView.m in Sources */,
 				9D8519C4179AD108009542D9 /* WUDemoKeyboardBuilder.m in Sources */,
-				9D8519C7179AD1D4009542D9 /* WUDemoKeyboardPressedCellPopupView.m in Sources */,
+				14FE2CA91A17AAB5005E0458 /* WUKeyboardPressedCellPopupView.m in Sources */,
 				9D8519CA179AD337009542D9 /* WUDemoKeyboardTextKeyCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -906,6 +896,7 @@
 				14CA43871A0EA091001E96BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14CA438B1A0EA091001E96BD /* Build configuration list for PBXNativeTarget "SKEmoticonsKeyboardDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -914,6 +905,7 @@
 				14CA43891A0EA091001E96BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D85197D179ACFB8009542D9 /* Build configuration list for PBXProject "WUEmoticonsKeyboardDemo" */ = {
 			isa = XCConfigurationList;
