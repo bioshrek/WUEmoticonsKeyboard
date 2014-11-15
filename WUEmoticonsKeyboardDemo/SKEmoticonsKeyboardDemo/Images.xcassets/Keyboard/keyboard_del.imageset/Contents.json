@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "keyboard_del.png"
+      "filename" : "keyboard_del_pressed1.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "keyboard_del@2x.png"
+      "filename" : "keyboard_del_pressed1@2x.png"
     }
   ],
   "info" : {

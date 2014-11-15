@@ -3,12 +3,11 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "keyboard_emotion_selected.png"
+      "filename" : "smile-white.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "keyboard_emotion_selected@2x.png"
+      "scale" : "2x"
     }
   ],
   "info" : {

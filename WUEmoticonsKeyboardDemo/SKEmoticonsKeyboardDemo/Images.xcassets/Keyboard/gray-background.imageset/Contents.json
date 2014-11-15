@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "keyboard_switch_pressed1.png"
+      "filename" : "gray-background.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "keyboard_switch_pressed1@2x.png"
+      "filename" : "gray-background@2x.png"
     }
   ],
   "info" : {
