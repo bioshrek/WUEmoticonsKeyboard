@@ -44,7 +44,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    [self.editor reloadInputViews];
+    NSLog(@"did rotate");
+}
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    NSLog(@"view did appear");
+}
 
 - (SKEmoticonsControlView *)createEmoticonsKeyboard
 {
@@ -139,6 +151,7 @@
     [keyboard.segmentedControl setBackgroundImage:[UIImage imageNamed:@"white-background"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
     keyboard.toolbar.backgroundColor = [UIColor whiteColor];
+    keyboard.backgroundColor = [UIColor redColor];
     
     //Keyboard background
     /*
@@ -159,8 +172,6 @@
 #pragma mark - action
 
 - (IBAction)emojiButtonPressed:(id)sender {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 216)];
-    view.backgroundColor = [UIColor blueColor];
     self.editor.inputView = self.emoticonKeyboard;
     [self.editor reloadInputViews];
     

@@ -78,6 +78,23 @@ CGFloat const SKEmoticonsKeyboardKeyItemGroupViewPageControlHeight = 23;
     return self;
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    // background view
+    self.backgroundImageView.frame = self.bounds;
+    
+    // page control
+    self.pageControl.frame = CGRectMake(0, 0, CGRectGetWidth(self.bounds), SKEmoticonsKeyboardKeyItemGroupViewPageControlHeight);
+    
+    // collection view
+    self.collectionView.frame = CGRectMake(0, SKEmoticonsKeyboardKeyItemGroupViewPageControlHeight, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) - SKEmoticonsKeyboardKeyItemGroupViewPageControlHeight);
+    
+    // TODO: layout not update correctly
+    [self.collectionView.collectionViewLayout invalidateLayout];
+}
+
 - (void)setPopupViewWhenCellPressed:(BOOL)popupViewWhenCellPressed
 {
     if (NO == _popupViewWhenCellPressed && YES == popupViewWhenCellPressed) {

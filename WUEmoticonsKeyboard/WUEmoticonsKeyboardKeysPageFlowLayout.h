@@ -13,4 +13,7 @@
 @property (nonatomic) CGFloat      lineSpacing;
 @property (nonatomic) CGFloat      itemSpacing;
 @property (nonatomic) UIEdgeInsets pageContentInsets;
+
++ (UICollectionViewLayout *)defaultLayoutForUIInterfaceOrientation:(UIInterfaceOrientation)orientation;
+
 @end

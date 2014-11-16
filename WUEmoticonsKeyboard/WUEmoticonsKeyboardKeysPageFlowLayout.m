@@ -58,8 +58,13 @@
     }
 }
 
+#pragma mark - override
+
 - (void)prepareLayout {
-    //We do nothing...
+    // update paging content insets based on device orientation
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    self.pageContentInsets = (UIInterfaceOrientationLandscapeLeft == orientation ||
+                                UIInterfaceOrientationLandscapeRight == orientation) ? UIEdgeInsetsMake(5, 35, 5, 35) : UIEdgeInsetsMake(5, 5, 5, 5);
 }
 
 - (CGSize)collectionViewContentSize {
@@ -94,5 +99,15 @@
     return [array copy];
 }
 
++ (UICollectionViewLayout *)defaultLayoutForUIInterfaceOrientation:(UIInterfaceOrientation)orientation
+{
+    WUEmoticonsKeyboardKeysPageFlowLayout *layout = [[WUEmoticonsKeyboardKeysPageFlowLayout alloc] init];
+    layout.itemSize = CGSizeMake(44, 44);
+    layout.pageContentInsets = (UIInterfaceOrientationLandscapeLeft == orientation ||
+                                UIInterfaceOrientationLandscapeRight == orientation) ? UIEdgeInsetsMake(5, 35, 5, 35) : UIEdgeInsetsMake(5, 5, 5, 5);
+    layout.itemSpacing = 0;
+    layout.lineSpacing = 0;
+    return layout;
+}
 
 @end

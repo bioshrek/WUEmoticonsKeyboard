@@ -22,12 +22,7 @@
 
 - (UICollectionViewLayout *)keyItemsLayout {
     if (!_keyItemsLayout) {
-        WUEmoticonsKeyboardKeysPageFlowLayout *layout = [[WUEmoticonsKeyboardKeysPageFlowLayout alloc] init];
-        layout.itemSize = CGSizeMake(44, 44);
-        layout.pageContentInsets = UIEdgeInsetsMake(5, 5, 5, 5);
-        layout.itemSpacing = 0;
-        layout.lineSpacing = 0;
-        _keyItemsLayout = layout;
+        _keyItemsLayout = [WUEmoticonsKeyboardKeysPageFlowLayout defaultLayoutForUIInterfaceOrientation:[UIApplication sharedApplication].statusBarOrientation];
     }
     return _keyItemsLayout;
 }

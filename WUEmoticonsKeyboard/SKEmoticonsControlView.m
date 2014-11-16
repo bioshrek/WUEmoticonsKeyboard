@@ -12,7 +12,8 @@
 
 // constants: layout constants
 static CGFloat const kToolbarHeight = 45.0f;
-static CGFloat const kGroupViewHeight = 171.0f;
+static CGFloat const kGroupViewPortraitOrientationHeight = 171.0f;
+static CGFloat const kGroupViewLandscapeOrientationHeight = 125.0f;
 
 @interface SKEmoticonsControlView () <SKEmoticonsKeyboardItemGroupViewDelegate>
 
@@ -56,15 +57,17 @@ static CGFloat const kGroupViewHeight = 171.0f;
 {
     [super layoutSubviews];
     
+    CGFloat groupViewHeight = [self groupViewHeight];
+    
     // self
     CGRect bounds = CGRectMake(0,
                                0,
                                CGRectGetWidth(self.superview.bounds),
-                               kGroupViewHeight + 1 + kToolbarHeight);
+                               groupViewHeight + 1 + kToolbarHeight);
     self.bounds = bounds;
     
     // toolbar
-    self.toolbar.frame = CGRectMake(0, kGroupViewHeight + 1, CGRectGetWidth(bounds), kToolbarHeight);
+    self.toolbar.frame = CGRectMake(0, groupViewHeight + 1, CGRectGetWidth(bounds), kToolbarHeight);
     CGSize toolbarSize = self.toolbar.bounds.size;
     
     // left button
@@ -83,12 +86,19 @@ static CGFloat const kGroupViewHeight = 171.0f;
     self.segmentedControl.center = CGPointMake(toolbarSize.width / 2, toolbarSize.height / 2);
     
     // keyItemGroupView
-    self.currentKeyItemGroupView.frame = [self rectForKeyItemGroupView];
+    self.currentKeyItemGroupView.frame = [self rectForKeyItemGroupViewWithHeight:groupViewHeight];
 }
 
-- (CGRect)rectForKeyItemGroupView
+- (CGRect)rectForKeyItemGroupViewWithHeight:(CGFloat)height
 {
-    return CGRectMake(0, 0, CGRectGetWidth(self.superview.bounds), kGroupViewHeight);
+    return CGRectMake(0, 0, CGRectGetWidth(self.superview.bounds), height);
+}
+
+- (CGFloat)groupViewHeight
+{
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    
+    return (UIInterfaceOrientationLandscapeLeft == orientation || UIInterfaceOrientationLandscapeRight == orientation) ? kGroupViewLandscapeOrientationHeight : kGroupViewPortraitOrientationHeight;
 }
 
 - (UIView *)createToolbar
@@ -131,7 +141,7 @@ static CGFloat const kGroupViewHeight = 171.0f;
     self.keyItemGroupViews = nil;
     NSMutableArray *keyItemGroupViews = [NSMutableArray array];
     [self.keyItemGroups enumerateObjectsUsingBlock:^(WUEmoticonsKeyboardKeyItemGroup *keyItemGroup, NSUInteger idx, BOOL *stop) {
-        SKEmoticonsKeyboardItemGroupView *keyItemGroupView = [[SKEmoticonsKeyboardItemGroupView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), kGroupViewHeight)];
+        SKEmoticonsKeyboardItemGroupView *keyItemGroupView = [[SKEmoticonsKeyboardItemGroupView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), [self groupViewHeight])];
         keyItemGroupView.keyItemGroup = keyItemGroup;
         keyItemGroupView.delegate = self;
         keyItemGroupView.popupViewWhenCellPressed = keyItemGroup.popupViewWhenKeyCellPressed;
@@ -197,7 +207,7 @@ static CGFloat const kGroupViewHeight = 171.0f;
     
     _currentKeyItemGroupView = currentKeyItemGroupView;
     
-    self.currentKeyItemGroupView.frame = [self rectForKeyItemGroupView];
+    self.currentKeyItemGroupView.frame = [self rectForKeyItemGroupViewWithHeight:[self groupViewHeight]];
     [self addSubview:currentKeyItemGroupView];
 }
 
