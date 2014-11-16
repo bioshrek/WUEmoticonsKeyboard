@@ -60,6 +60,7 @@
 
 #pragma mark - override
 
+// subclass should override this method if not using default layout
 - (void)prepareLayout {
     // update paging content insets based on device orientation
     UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;

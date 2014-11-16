@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140EE1A91A18D4CF0041395F /* SKActionEmoticonsKeyboardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 140EE1A81A18D4CF0041395F /* SKActionEmoticonsKeyboardLayout.m */; };
+		140EE1AC1A18DFF50041395F /* SKActionEmoticonsKeyboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 140EE1AB1A18DFF50041395F /* SKActionEmoticonsKeyboardCell.m */; };
 		14CA435C1A0EA091001E96BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D851987179ACFB8009542D9 /* Foundation.framework */; };
 		14CA435D1A0EA091001E96BD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D851989179ACFB8009542D9 /* CoreGraphics.framework */; };
 		14CA435E1A0EA091001E96BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D851985179ACFB8009542D9 /* UIKit.framework */; };
@@ -105,6 +107,10 @@
 /* Begin PBXFileReference section */
 		1402EC901A0E622600698EEA /* SKEmoticonsControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKEmoticonsControlView.h; sourceTree = "<group>"; };
 		1402EC911A0E622600698EEA /* SKEmoticonsControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKEmoticonsControlView.m; sourceTree = "<group>"; };
+		140EE1A71A18D4CF0041395F /* SKActionEmoticonsKeyboardLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKActionEmoticonsKeyboardLayout.h; sourceTree = "<group>"; };
+		140EE1A81A18D4CF0041395F /* SKActionEmoticonsKeyboardLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKActionEmoticonsKeyboardLayout.m; sourceTree = "<group>"; };
+		140EE1AA1A18DFF50041395F /* SKActionEmoticonsKeyboardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKActionEmoticonsKeyboardCell.h; sourceTree = "<group>"; };
+		140EE1AB1A18DFF50041395F /* SKActionEmoticonsKeyboardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKActionEmoticonsKeyboardCell.m; sourceTree = "<group>"; };
 		14CA435B1A0EA091001E96BD /* SKEmoticonsKeyboardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKEmoticonsKeyboardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CA43611A0EA091001E96BD /* SKEmoticonsKeyboardDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SKEmoticonsKeyboardDemo-Info.plist"; sourceTree = "<group>"; };
 		14CA43631A0EA091001E96BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -246,6 +252,10 @@
 				14CA436F1A0EA091001E96BD /* SKViewController.m */,
 				14CA43711A0EA091001E96BD /* Images.xcassets */,
 				14CA43601A0EA091001E96BD /* Supporting Files */,
+				140EE1A71A18D4CF0041395F /* SKActionEmoticonsKeyboardLayout.h */,
+				140EE1A81A18D4CF0041395F /* SKActionEmoticonsKeyboardLayout.m */,
+				140EE1AA1A18DFF50041395F /* SKActionEmoticonsKeyboardCell.h */,
+				140EE1AB1A18DFF50041395F /* SKActionEmoticonsKeyboardCell.m */,
 			);
 			path = SKEmoticonsKeyboardDemo;
 			sourceTree = "<group>";
@@ -599,8 +609,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140EE1A91A18D4CF0041395F /* SKActionEmoticonsKeyboardLayout.m in Sources */,
 				14FE2CAA1A17B158005E0458 /* WUKeyboardPressedCellPopupView.m in Sources */,
 				14E5073F1A176C2A00848535 /* SKEmoticonsKeyboardItemGroupView.m in Sources */,
+				140EE1AC1A18DFF50041395F /* SKActionEmoticonsKeyboardCell.m in Sources */,
 				14CA43991A0EA7DA001E96BD /* WUDemoKeyboardTextKeyCell.m in Sources */,
 				14CA438C1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyCell.h in Sources */,
 				14CA438D1A0EA7B5001E96BD /* WUEmoticonsKeyboardKeyCell.m in Sources */,

@@ -173,6 +173,9 @@ CGFloat const SKEmoticonsKeyboardKeyItemGroupViewPageControlHeight = 23;
 - (void)refreshPageControl {
     self.pageControl.numberOfPages = ceil(self.collectionView.contentSize.width / CGRectGetWidth(self.collectionView.bounds));
     self.pageControl.currentPage = floor(self.collectionView.contentOffset.x / CGRectGetWidth(self.collectionView.bounds));
+    
+    // hide page control if only 1 page
+    self.pageControl.hidden = (self.pageControl.numberOfPages <= 1);
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

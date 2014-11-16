@@ -34,6 +34,12 @@
                                             <action selector="emojiButtonPressed:" destination="vXZ-lx-hvc" id="6s3-In-OQe"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ABI-NI-gs2"/>
+                                    <barButtonItem systemItem="add" id="MT6-Oo-f9e">
+                                        <connections>
+                                            <action selector="moreActionButtonPressed:" destination="vXZ-lx-hvc" id="evg-Mj-xPB"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -43,6 +49,7 @@
                     <navigationItem key="navigationItem" id="9un-7s-YuO"/>
                     <connections>
                         <outlet property="editor" destination="RVd-YS-DMr" id="VId-xt-oPt"/>
+                        <outlet property="toolbar" destination="kJj-TP-eL5" id="NWl-HR-s0P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

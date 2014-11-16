@@ -13,15 +13,28 @@
 #import "WUEmoticonsKeyboardKeysPageFlowLayout.h"
 #import "WUDemoKeyboardTextKeyCell.h"
 
+#import "SKEmoticonsKeyboardItemGroupView.h"
+
+#import "SKActionEmoticonsKeyboardLayout.h"
+
+#import "SKActionEmoticonsKeyboardCell.h"
+
+
 #import <MobileCoreServices/MobileCoreServices.h>
 
-@interface SKViewController () <SKEmoticonsControlViewDelegate>
+@interface SKViewController () <SKEmoticonsControlViewDelegate, SKEmoticonsKeyboardItemGroupViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *editor;
 
 @property (strong, nonatomic) SKEmoticonsControlView *emoticonKeyboard;
 
 @property (nonatomic, strong) WUEmoticonsKeyboardKeyItemGroup *iconKeyItemGroup;
+
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
+
+@property (weak, nonatomic) SKEmoticonsKeyboardItemGroupView *moreActionGroupView;
+
+@property (nonatomic, assign, getter = isEditorFirstResponder) BOOL editorFirstResponder;
 
 @end
 
@@ -36,12 +49,22 @@
     
     self.emoticonKeyboard = [self createEmoticonsKeyboard];
     self.emoticonKeyboard.delegate = self;
+    
+    SKEmoticonsKeyboardItemGroupView *groupView = [self createMoreActionGroupView];
+    [self.view addSubview:groupView];
+    groupView.hidden = YES;
+    self.moreActionGroupView = groupView;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc
+{
+    self.emoticonKeyboard = nil;
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
@@ -169,6 +192,47 @@
     return keyboard;
 }
 
+
+- (SKEmoticonsKeyboardItemGroupView *)createMoreActionGroupView
+{
+    // key items
+    WUEmoticonsKeyboardKeyItemGroup *keyItemGroup = [[WUEmoticonsKeyboardKeyItemGroup alloc] init];
+    keyItemGroup.keyItemCellClass = [SKActionEmoticonsKeyboardCell class];
+    
+    WUEmoticonsKeyboardKeyItem *photoActionItem = [[WUEmoticonsKeyboardKeyItem alloc] init];
+    photoActionItem.image = [UIImage imageNamed:@"photo"];
+    
+    WUEmoticonsKeyboardKeyItem *videoActionItem = [[WUEmoticonsKeyboardKeyItem alloc] init];
+    videoActionItem.image = [UIImage imageNamed:@"video"];
+    
+    WUEmoticonsKeyboardKeyItem *locationActionItem = [[WUEmoticonsKeyboardKeyItem alloc] init];
+    locationActionItem.image = [UIImage imageNamed:@"location"];
+    
+    keyItemGroup.keyItems = @[photoActionItem, videoActionItem, locationActionItem];
+    
+    // layout
+    SKActionEmoticonsKeyboardLayout *layout = [[SKActionEmoticonsKeyboardLayout alloc] init];
+    layout.itemSize = CGSizeMake(64.0f, 64.0f);
+    layout.itemSpacing = 30;
+    layout.lineSpacing = 20;
+    layout.pageContentInsets = UIEdgeInsetsMake(30, 30, 30, 30);
+    keyItemGroup.keyItemsLayout = layout;
+    
+    // group view
+    CGRect frameOfToolbar = self.toolbar.frame;
+    CGFloat maxYOfToolbar = CGRectGetMaxY(frameOfToolbar);
+    SKEmoticonsKeyboardItemGroupView *groupView =
+        [[SKEmoticonsKeyboardItemGroupView alloc] initWithFrame:CGRectMake(CGRectGetMinX(frameOfToolbar),
+                                                                           maxYOfToolbar,
+                                                                           CGRectGetWidth(frameOfToolbar),
+                                                                           CGRectGetHeight(self.view.bounds) - maxYOfToolbar)];
+    groupView.keyItemGroup = keyItemGroup;
+    groupView.delegate = self;
+    groupView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    groupView.backgroundColor = [UIColor lightGrayColor];
+    return groupView;
+}
+
 #pragma mark - action
 
 - (IBAction)emojiButtonPressed:(id)sender {
@@ -189,6 +253,25 @@
 - (void)backspaceButtonPressed:(id)sender
 {
     [self.editor deleteBackward];
+}
+
+- (IBAction)moreActionButtonPressed:(UIBarButtonItem *)sender {
+    if (self.moreActionGroupView.hidden) {
+        // backup editor state
+        self.editorFirstResponder = [self.editor isFirstResponder];
+        [self.editor resignFirstResponder];
+        
+        // show it
+        self.moreActionGroupView.hidden = NO;
+    } else {
+        // hide it
+        self.moreActionGroupView.hidden = YES;
+        
+        // restore editor state
+        if (self.isEditorFirstResponder) {
+            [self.editor becomeFirstResponder];
+        }
+    }
 }
 
 #pragma mark - SKEmoticonsControlDelegate
@@ -212,5 +295,11 @@
     }
 }
 
+#pragma mark - SKemoticonsKeyboardKeyItemGroupView Delegate
+
+- (void)groupView:(SKEmoticonsKeyboardItemGroupView *)groupView didSelectItemAtIndex:(NSUInteger)index
+{
+    NSLog(@"action %d is clicked.", (int)index);
+}
 
 @end
